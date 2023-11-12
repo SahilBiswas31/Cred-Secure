@@ -283,7 +283,7 @@ def make_transaction_and_predict(customer_transaction):
         st.warning(
             "Terminal {} blacklisted for customer {}, transaction blocked".format(terminal_id, customer_id))
 
-    elif count == frequency:
+    elif count >= frequency:
         st.warning(
             "Threshold frequency of {} has been reached for customer {} for date {}, transaction blocked".format(
                 frequency, customer_id, dat))
